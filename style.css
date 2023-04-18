@@ -8,55 +8,82 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
-    margin-bottom: 400px;
+    padding: 100px;
+    background:  url(https://www.shutterstock.com/image-photo/staff-working-document-management-system-260nw-2249422393.jpg);
+    background-blend-mode: overlay;
+  background-size: cover;
   }
   
   header h1 {
     margin: 0;
     font-size: 2rem;
+    
   }
   
   header nav a {
     color: #fff;
     text-decoration: none;
     margin-right: 1rem;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: right;
+  
   }
   
   /* Main */
   main {
     padding: 2rem;
+    
   }
   
   .employee-card {
     display: flex;
     flex-direction: column;
     display: inline-block;
-    background-color: #f7f7f7;
+   
+    background-color: #fff;
+    /*background-color: #f7f7f7;*/
     border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(65, 6, 6, 0.2);
     margin: 1rem;
     padding: 1rem;
     width: 300px;
   }
   
   .employee-card img {
-    width: 200px;
+    width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
+    align-items: center ;
+    justify-content: center;
+
+    
+   
   }
   
   .employee-card h2 {
     margin: 0;
     font-size: 1.5rem;
     text-align: center;
+    
   }
   
   .employee-card p {
     margin: 0.5rem 0;
     font-size: 1.2rem;
     text-align: center;
+    font-family: cursive;
+  }
+  .form-control employeeForm{
+    justify-content: space-between;
+  }
+  .image{
+    
+    align-items: center;
   }
   
   /* Footer */
@@ -64,9 +91,10 @@ header {
     display: flex;
     justify-content:space-between ;
     align-items: center;
-    background-color: #333;
+    background-color: #3A98B9;
     color: #fff;
     padding: 1rem;
+    margin-top: 250px;
    
   }
   
@@ -77,12 +105,13 @@ header {
   }
   
   footer a {
-    color: #fff;
+    color: #fcfdfd;
     text-decoration: none;
     margin-left: 0.5rem;
    
   }
   
+
   
 
 
