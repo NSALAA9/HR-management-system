@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,5 +60,66 @@
         </div>
         <p>&copy; 2023 Employee Salary Calculator. All rights reserved.</p>
     </footer>
-    <script src="./app.js"></script>
-    <script>
+    <script src="./app.js"></script>-->
+
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Management System</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accounting.html">Accounting</a></li>
+            </ul>
+        </nav>
+
+    </header>
+	<h1>Employee Management System</h1>
+	<div class="form">
+		<h2>Add Employee</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name">
+		<label for="department">Department:</label>
+		<select id="department">
+			<option value="Administration">Administration</option>
+			<option value="Marketing">Marketing</option>
+			<option value="Development">Development</option>
+			<option value="Finance">Finance</option>
+		</select>
+		<label for="salary">Salary:</label>
+		<input type="number" id="salary">
+		<button onclick="addEmployee()">Add</button>
+	</div>
+	<div class="table">
+		<h2>Employee List</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Department</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody id="employeeTableBody">
+			</tbody>
+		</table>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+
+
+<footer>
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+    <p>&copy; 2023 Employee Salary Calculator. All rights reserved.</p>
+</footer>
