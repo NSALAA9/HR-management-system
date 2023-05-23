@@ -1,4 +1,4 @@
- // Employee constructor function
+ /*// Employee constructor function
  function Employee(id, name, department, level, imageUrl, salary) {
   this.id = id;
   this.name = name;
@@ -110,16 +110,163 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
 
 
 
-//renderEmployeeList();
-renderEmployeeList(employees);
+renderEmployeeList();
+renderEmployeeList(employees);*/
+
+
+/*
+
+// get the employee data from local storage, or set to an empty array if there is no data
+let employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+// function to add a new employee to the table and to local storage
+function addEmployee() {
+	// get the values of the input fields
+	const nameInput = document.getElementById("name");
+	const departmentInput = document.getElementById("department");
+	const salaryInput = document.getElementById("salary");
+
+	const name = nameInput.value;
+	const department = departmentInput.value;
+	const salary = salaryInput.value;
+
+	// validate input
+	if (name === "" || department === "" || salary === "") {
+		alert("Please fill out all fields");
+		return;
+	}
+
+	// create a new employee object
+	const employee = {
+		name,
+		department,
+		salary
+	};
+
+	// add the employee object to the employees array
+	employees.push(employee);
+
+	// save the employees array to local storage
+	localStorage.setItem("employees", JSON.stringify(employees));
+
+	// add the new employee row to the table
+	const employeeTableBody = document.getElementById("employeeTableBody");
+	const newRow = employeeTableBody.insertRow();
+	const nameCell = newRow.insertCell();
+	const departmentCell = newRow.insertCell();
+	const salaryCell = newRow.insertCell();
+
+	nameCell.innerText = name;
+	departmentCell.innerText = department;
+	salaryCell.innerText = salary;
+
+	// clear the input fields
+	nameInput.value = "";
+	departmentInput.value = "";
+	salaryInput.value = "";
+}
+
+// function to display the employee table with data from local storage
+function displayEmployees() {
+	// get the employee table body element
+	const employeeTableBody = document.getElementById("employeeTableBody");
+
+	// clear any existing rows from the table
+	employeeTableBody.innerHTML = "";
+
+	// loop through the employees array and add a row to the table for each employee
+	for (let i = 0; i < employees.length; i++) {
+		const employee = employees[i];
+
+		const newRow = employeeTableBody.insertRow();
+		const nameCell = newRow.insertCell();
+		const departmentCell = newRow.insertCell();
+		const salaryCell = newRow.insertCell();
+
+  }
+}
+*/
+
+
+
+  // function to add a new employee to the table and to local storage
+function addEmployee() {
+	// get the values of the input fields
+	const nameInput = document.getElementById("name");
+	const departmentInput = document.getElementById("department");
+	const salaryInput = document.getElementById("salary");
+
+	const name = nameInput.value;
+	const department = departmentInput.value;
+	const salary = salaryInput.value;
+
+	// validate input
+	if (name === "" || department === "" || salary === "") {
+		alert("Please fill out all fields");
+		return;
+	}
+
+	// create a new employee object
+	const employee = {
+		name,
+		department,
+		salary
+	};
+
+	// get the existing employees from local storage or initialize to an empty array
+	let employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+	// add the new employee object to the employees array
+	employees.push(employee);
+
+	// save the updated employees array to local storage
+	localStorage.setItem("employees", JSON.stringify(employees));
+
+	// add the new employee row to the table
+	const employeeTableBody = document.getElementById("employeeTableBody");
+	const newRow = employeeTableBody.insertRow();
+	const nameCell = newRow.insertCell();
+	const departmentCell = newRow.insertCell();
+	const salaryCell = newRow.insertCell();
+
+	nameCell.innerText = name;
+	departmentCell.innerText = department;
+	salaryCell.innerText = salary;
+
+	// clear the input fields
+	nameInput.value = "";
+	departmentInput.value = "";
+	salaryInput.value = "";
+}
+
+// function to display the employee table with data from local storage
+function displayEmployees() {
+	// get the employee table body element
+	const employeeTableBody = document.getElementById("employeeTableBody");
+
+	// clear any existing rows from the table
+	employeeTableBody.innerHTML = "";
+
+	// get the existing employees from local storage or initialize to an empty array
+	let employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+	// loop through the employees array and add a row to the table for each employee
+	for (let i = 0; i < employees.length; i++) {
+		const employee = employees[i];
+
+		const newRow = employeeTableBody.insertRow();
+		const nameCell = newRow.insertCell();
+		const departmentCell = newRow.insertCell();
+		const salaryCell = newRow.insertCell();
+
+		nameCell.innerText = employee.name;
+		departmentCell.innerText = employee.department;
+		salaryCell.innerText = employee.salary;
+	}
+}
 
 
 
 
-
-
-
-
-  
   
   

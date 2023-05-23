@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Accounting Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+<head>
+	<title>Employee Management System - Accounting</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="accounting.html">Home</a></li>
-          <li><a href="index.html">Employee Salary Calculator</a></li>
-       
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accounting.html">Accounting</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-      <!-- The main content of this page will be added later -->
-    </main>
-    <footer>
-      <div>
-        <p>&copy; 2023 Accounting Company. All rights reserved.</p>
-      </div>
-      
-    </footer>
-  </body>
+
+	<h1>Employee Management System - Accounting</h1>
+
+	<div class="table">
+		<h2>Department Information</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Department</th>
+					<th># of employees</th>
+					<th>Total Salary</th>
+					<th>Average Salary</th>
+				</tr>
+			</thead>
+			<tbody id="departmentTableBody">
+				<!-- Department information will be rendered here -->
+			</tbody>
+		</table>
+
+		<tfoot>
+			<tbody id="tableFooter">
+				<!-- Table footer with totals will be rendered here -->
+			</tbody>
+		</tfoot>
+	</div>
+
+	<footer>
+	    <div class="social-media">
+	        <a href="#">Facebook</a>
+	        <a href="#">Twitter</a>
+	        <a href="#">Instagram</a>
+	    </div>
+	    <p>&copy; 2023 Employee Salary Calculator. All rights reserved.</p>
+	</footer>
+
+	<script src="accounting.js"></script>
+</body>
 </html>
-
-
-
 
 
